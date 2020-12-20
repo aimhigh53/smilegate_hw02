@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=0"
+  />
+  <title>Crypto Mobile Template</title>
+  <!-- Google font file. If you want you can change. -->
+  <link
+          href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,900"
+          rel="stylesheet"
+  />
+  <!-- Fontawesome font file css -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <!-- Template global css file. Requared all pages -->
+  <link rel="stylesheet" type="text/css" href="css/global.style.css" />
+</head>
+<body>
+<div class="wrapper">
+  <div class="nav-menu">
+    <nav class="menu">
+      <!-- Menu navigation start -->
+      <div class="nav-container">
+        <ul class="main-menu">
+          <li class="">
+            <a href="index.html"><img src="img/content/icons/1.png" alt=""><strong>Dashboard</strong> </a>
+          </li>
+          <li class="">
+            <a href="setting.html"><img src="img/content/icons/11.png" alt=""><strong>Settings</strong> </a>
+          </li>
+          <li class="active">
+            <a href="javascript:void(0);"><img src="img/content/icons/9.png" alt=""><strong>Login/Register</strong> <span class="fa fa-angle-down"></span></a>
+            <ul>
+              <li class="active"><a href="login.html" data-loader="show">Login</a></li>
+              <li><a href="signup.html" data-loader="show">Register</a></li>
+              <li><a href="forgot-password.html" data-loader="show">Forgot Password</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><img src="img/content/icons/15.png" alt=""><strong> Pages</strong> <span class="fa fa-angle-down"></span></a>
+            <ul>
+              <li><a href="profile.html" data-loader="show">User Profile</a></li>
+              <li><a href="search-result.html" data-loader="show">Search Results</a></li>
+              <li><a href="contact.html" data-loader="show">Contact</a></li>
+              <li><a href="blank.html" data-loader="show">Blank Page</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Menu navigation end -->
+    </nav>
+  </div>
+  <div class="wrapper-inline">
+    <!-- Header area start -->
+    <header>
+      <!-- extra class no-background -->
+      <a class="go-back-link" href="javascript:history.back();"
+      ><i class="fa fa-arrow-left"></i
+        ></a>
+      <h1 class="page-title">SIGN UP</h1>
+      <div class="navi-menu-button">
+        <em></em>
+        <em></em>
+        <em></em>
+      </div>
+    </header>
+    <!-- Header area end -->
+    <!-- Page content start -->
+    <main>
+      <div class="container">
+        <div class="form-divider"></div>
+        <div class="form-label-divider"><span>회원가입페이지</span></div>
+        <div class="form-divider"></div>
+        <div class="form-row-group with-icons">
+          <div class="form-row no-padding">
+            <i class="fa fa-user"></i>
+            <input
+                    type="text"
+                    id="userName"
+                    class="form-element"
+                    placeholder="Username"
+                    value=""
+            />
+          </div>
+          <div class="form-row no-padding">
+            <i class="fa fa-envelope"></i>
+            <input
+                    type="email"
+                    id="userEmail"
+                    class="form-element"
+                    placeholder="Email"
+                    value=""
+            />
+          </div>
+          <button
+                  type="button"
+                  id="overlapBtn"
+                  class="button circle block orange"
+                  style="height: 30px;width: 120px;font-size: 10px"
+          >
+            이메일 중복확인
+          </button>
+
+          <div class="form-row no-padding">
+            <i class="fa fa-lock"></i>
+            <input
+                    type="password"
+                    id="userPassword"
+                    class="form-element"
+                    placeholder="Password"
+                    value=""
+            />
+          </div>
+          <div class="form-row no-padding">
+            <i class="fa fa-lock"></i>
+            <input
+                    type="password"
+                    id="checkUserPassword"
+                    class="form-element"
+                    placeholder="CheckPassword"
+                    value=""
+            />
+          </div>
+
+        </div>
+<!--        <div class="form-row-group with-icons">-->
+<!--          <div class="form-row no-padding">-->
+<!--            <div id="hiddenThings" style="display: none">-->
+<!--            <i class="fa fa-check"></i>-->
+<!--                &lt;!&ndash;timer ..시간나면 구현&ndash;&gt;-->
+<!--            <input-->
+<!--                    type="text"-->
+<!--                    id="emailCode"-->
+<!--                    class="form-element"-->
+<!--                    placeholder="emailCode"-->
+<!--                    value=""-->
+<!--            />-->
+<!--                <button-->
+<!--                  type="button"-->
+<!--                  id="verifyBtn"-->
+<!--                  class="button circle block orange"-->
+<!--                  style="width: 70px"-->
+<!--                >OK-->
+<!--              </button>-->
+<!--              <br/>-->
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--        </div>-->
+
+
+        <div class="form-row">
+
+          <button
+                  type="button"
+                  id="signupBtn"
+                  class="button circle block orange"
+          >
+            가입하기
+          </button>
+        </div>
+        <br/>
+        <div class="form-row">
+          <button type="button" id="findPassBtn" class="button circle block orange">비밀번호찾기</button>
+        </div>
+
+        <div class="form-row txt-center mt-15">
+          Already have an account?
+          <a href="/signin" data-loader="show">Login</a>
+        </div>
+      </div>
+    </main>
+    <!-- Page content end -->
+  </div>
+</div>
+<!--Page loader DOM Elements. Requared all pages-->
+<div class="sweet-loader">
+  <div class="box">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+  </div>
+</div>
+<!-- JQuery library file. requared all pages -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<!-- Template global script file. requared all pages -->
+<script src="js/global.script.js"></script>
+<script>
+
+
+
+    var verifiedemail=0;
+
+
+  $("#overlapBtn").click(function (){
+    getUserEmail = $("#userEmail").val();
+
+    console.log(getUserEmail);
+
+    $.ajax({
+      url: "/signup/overlapcheck",
+      type: "GET",
+      data: {
+        userEmail: getUserEmail,
+      },
+      success: function (data) {
+        if (data == 1) {
+
+        verifiedemail = 1;
+        alert("사용가능한 이메일입니다.")
+      }else if(data==0){
+          verifiedemail = 0;
+          alert("중복된 이메일입니다.")
+      }else {
+          alert("맞지않는 이메일 형식입니다.")
+        }
+
+      }, error: function (error) {
+        console.log(error)
+
+      }
+    });
+
+  });
+
+  $("#signupBtn").click(function () {
+    var userName = $("#userName").val();
+    var userEmail = $("#userEmail").val();
+    var userPassword = $("#userPassword").val();
+    var checkUserPassword = $("#checkUserPassword").val();
+
+
+    if (userEmail.length==0 || userName.length==0 || userPassword.length==0){
+      alert("개인정보를 모두 입력하세요!");
+    }else if(userPassword.length<=8||userPassword.length>16){
+      alert("비밀번호는 8자 이상, 15자 이하입니다.");
+    }else if(verifiedemail==0){
+      alert("이메일 중복확인을 진행하셔야 합니다.");
+    }else if(getUserEmail!==userEmail){
+      alert("이메일 중복확인을 다시해주세요.");
+    }else if(userPassword!==checkUserPassword){
+      alert("비밀번호가 같지않습니다.");
+    } else{
+      localStorage.setItem('getEmail',userEmail);
+
+
+      $.ajax({
+        url: "/signup",
+        type: "POST",
+        data: {
+          userName:userName,
+          userEmail:userEmail,
+          userPassword: userPassword
+        },
+        success: function (data) {
+          console.log(data)
+          if (data == "0") {
+            console.log("sth wrong")
+          } else {
+            window.location.href='/verifyEmail'
+            console.log("success")
+          }
+        }, error: function (request,status,error) {
+          alert(request.status);
+        }
+      });
+
+
+    }
+
+  });
+
+  $("#findPassBtn").click(function(){
+    $.ajax({
+      url: "/signup/findpassword",
+      type: "GET",
+      success: function (data) {
+        if(data!=1){
+          alert('뭔가 잘못되었습니다.')
+        }else{
+          window.location.href='/findpassword'
+        }
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    });
+
+  })
+
+</script>
+</body>
+</html>
