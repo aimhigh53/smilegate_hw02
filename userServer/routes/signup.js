@@ -68,20 +68,19 @@ router.post('/',function (req,res){
 
   var setObject = async function (key,obj1,obj2,obj3) {
 
-    console.log(key,obj1,obj2);
 
 
-    await client.hset(key,'userName',obj1,'userEmail',obj2,'userPassword',obj3,function (err,reply){
+    await client.hmset(key,'userName',obj1,'userEmail',obj2,'userPassword',obj3,function (err,reply){
       if(err){
         console.log(err)
         res.json(0);
       }else{
-        console.log(typeof(''+userEmail)+""+typeof obj1+""+typeof obj2+""+typeof obj3);
         console.log(reply)
       }
     });
     //set expire date
-      await client.setex(''+userEmail,1000 * 60 * 60 * 24 * 7,'refreshToken',function (err,reply){
+    //6h
+      await client.setex(key+':refreshToken',1000 * 60 * 60 * 6,'refreshToken',function (err,reply){
         if(err){
           console.log(err)
           res.json(0);

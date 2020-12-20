@@ -235,7 +235,7 @@
 
     if (userEmail.length==0 || userName.length==0 || userPassword.length==0){
       alert("개인정보를 모두 입력하세요!");
-    }else if(userPassword.length<=8||userPassword.length>16){
+    }else if(userPassword.length<8||userPassword.length>16){
       alert("비밀번호는 8자 이상, 15자 이하입니다.");
     }else if(verifiedemail==0){
       alert("이메일 중복확인을 진행하셔야 합니다.");
