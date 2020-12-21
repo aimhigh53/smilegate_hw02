@@ -73,8 +73,8 @@ app.post('/verifyemail',async (req, res) => {
               res.json(0)
             }else{
                 //for test
-                // res.json(authNum)
-                res.json(1);
+                res.json(authNum)
+                // res.json(1);
             }
             smtpTransport.close();
 

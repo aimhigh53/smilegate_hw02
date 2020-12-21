@@ -38,15 +38,6 @@
                             <li><a href="forgot-password.html" data-loader="show">Forgot Password</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><img src="img/content/icons/15.png" alt=""><strong> Pages</strong> <span class="fa fa-angle-down"></span></a>
-                        <ul>
-                            <li><a href="profile.html" data-loader="show">User Profile</a></li>
-                            <li><a href="search-result.html" data-loader="show">Search Results</a></li>
-                            <li><a href="contact.html" data-loader="show">Contact</a></li>
-                            <li><a href="blank.html" data-loader="show">Blank Page</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
             <!-- Menu navigation end -->
@@ -109,16 +100,7 @@
                     </button>
                 </div>
                 <br/>
-                <div class="form-row">
 
-                    <button
-                            type="button"
-                            id="signupBtn"
-                            class="button circle block orange"
-                    >
-                        뒤로가기
-                    </button>
-                </div>
                 <div class="form-row txt-center mt-15">
                     Already have an account?
                     <a href="/signin" data-loader="show">Login</a>
@@ -160,12 +142,10 @@
                     userEmail: userEmail,
                 },
                 success: function (data) {
-                    console.log(data)
                     if (data === "0") {
                         alert('메일주소를 확인해주세요')
                     } else {
                         alert('메일이 전송되었습니다.')
-                        alert(data)
                         verifycode = data;
 
                     }
