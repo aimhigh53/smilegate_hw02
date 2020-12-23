@@ -15,7 +15,7 @@ const client = redis.createClient(REDIS_PORT,HOST);
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'ehfwkd53',
+  password : '',
   database : 'userdb'
 });
 

@@ -29,7 +29,6 @@ router.get('/',function (req,res){
                 client.hmget(userEmail, "refreshToken", function (err, obj) {
                     if (err) {
                         console.log(err);
-                        console.log('여기ㅣ이이이');
                     } else {
                         refreshtoken = obj[0];
                         setTimeout(()=>{

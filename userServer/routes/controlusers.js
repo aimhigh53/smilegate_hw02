@@ -12,7 +12,7 @@ const saltRounds = 10;
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'ehfwkd53',
+    password : '',
     database : 'userdb'
 });
 

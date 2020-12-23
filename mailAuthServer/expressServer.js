@@ -14,16 +14,6 @@ const smtpTransport = require('nodemailer-smtp-transport');
 // const auth = require('./lib/auth');
 
 const app = express()
-
-
-// var mysql      = require('mysql');
-// var connection = mysql.createConnection({
-//     host     : 'localhost',
-//     user     : 'root',
-//     password : 'ehfwkd53',
-//     database : 'fintech'
-// });
-
 // connection.connect();
 
 app.set('views',__dirname+'/views'); //렌더링할 파일이 있는 디렉토리
