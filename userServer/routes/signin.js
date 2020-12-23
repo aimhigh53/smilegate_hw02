@@ -97,7 +97,7 @@ router.post('/',function (req,res){
                         }
                     );
                     //
-                    setToken(userEmail,accesstoken)
+                    setToken(userEmail,refreshtoken)
 
                     res.cookie('x_access_token', accesstoken, {
                         maxAge: 1000 * 60 * 30, // maintain 30min
